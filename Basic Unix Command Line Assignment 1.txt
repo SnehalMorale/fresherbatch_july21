@@ -1,0 +1,808 @@
+
+Assignments:-
+
+List the contents of a directory and their attributes
+-->
+snavnath@LIN25006084 MINGW64 ~
+$ ls -a
+ ./
+ ../
+ .bash_history
+ .cisco/
+ .dbshell
+ .gitconfig
+ .lesshst
+ .mongorc.js
+ .viminfo
+ .vscode/
+'3D Objects'/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Documents/
+ Downloads/
+ Favorites/
+ IntelGraphicsProfiles/
+ Links/
+'Local Settings'@
+ Music/
+'My Documents'@
+ NTUSER.DAT
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+'OneDrive - Capgemini'/
+ Pictures/
+ PrintHood@
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Videos/
+ assignments/
+ my-repo/
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+ project_dir/
+
+
+
+Long list the content with file, directory ownership, permissions,sizes, etc…
+-->
+snavnath@LIN25006084 MINGW64 ~
+$ ls -l
+total 7553
+drwxr-xr-x 1 snavnath 1049089       0 Jul 30 19:53 '3D Objects'/
+drwxr-xr-x 1 snavnath 1049089       0 Jul 30 19:52  AppData/
+lrwxrwxrwx 1 snavnath 1049089      33 Jul 30 19:52 'Application Data' -> /c/Users/SNAVNATH/AppData/Roaming/
+drwxr-xr-x 1 snavnath 1049089       0 Jul 30 19:53  Contacts/
+lrwxrwxrwx 1 snavnath 1049089      61 Jul 30 19:52  Cookies -> /c/Users/SNAVNATH/AppData/Local/Microsoft/Windows/INetCookies/
+drwxr-xr-x 1 snavnath 1049089       0 Jul 31 09:02  Documents/
+drwxr-xr-x 1 snavnath 1049089       0 Aug  6 12:31  Downloads/
+drwxr-xr-x 1 snavnath 1049089       0 Jul 30 19:53  Favorites/
+drwxr-xr-x 1 snavnath 1049089       0 Aug  6 13:18  IntelGraphicsProfiles/
+drwxr-xr-x 1 snavnath 1049089       0 Jul 30 19:53  Links/
+lrwxrwxrwx 1 snavnath 1049089      31 Jul 30 19:52 'Local Settings' -> /c/Users/SNAVNATH/AppData/Local/
+drwxr-xr-x 1 snavnath 1049089       0 Jul 30 19:53  Music/
+lrwxrwxrwx 1 snavnath 1049089      27 Jul 30 19:52 'My Documents' -> /c/Users/SNAVNATH/Documents/
+-rw-r--r-- 1 snavnath 1049089 4456448 Aug  6 13:10  NTUSER.DAT
+-rw-r--r-- 1 snavnath 1049089   65536 Jul 30 19:58  NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf
+-rw-r--r-- 1 snavnath 1049089  524288 Jul 30 19:52  NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms
+-rw-r--r-- 1 snavnath 1049089  524288 Jul 30 19:52  NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms
+lrwxrwxrwx 1 snavnath 1049089      69 Jul 30 19:52  NetHood -> '/c/Users/SNAVNATH/AppData/Roaming/Microsoft/Windows/Network Shortcuts'/
+drwxr-xr-x 1 snavnath 1049089       0 Aug  6 13:18 'OneDrive - Capgemini'/
+drwxr-xr-x 1 snavnath 1049089       0 Aug  3 11:58  Pictures/
+lrwxrwxrwx 1 snavnath 1049089      69 Jul 30 19:52  PrintHood -> '/c/Users/SNAVNATH/AppData/Roaming/Microsoft/Windows/Printer Shortcuts'/
+lrwxrwxrwx 1 snavnath 1049089      58 Jul 30 19:52  Recent -> /c/Users/SNAVNATH/AppData/Roaming/Microsoft/Windows/Recent/
+drwxr-xr-x 1 snavnath 1049089       0 Jul 30 19:53 'Saved Games'/
+drwxr-xr-x 1 snavnath 1049089       0 Jul 30 19:53  Searches/
+lrwxrwxrwx 1 snavnath 1049089      58 Jul 30 19:52  SendTo -> /c/Users/SNAVNATH/AppData/Roaming/Microsoft/Windows/SendTo/
+lrwxrwxrwx 1 snavnath 1049089      62 Jul 30 19:52 'Start Menu' -> '/c/Users/SNAVNATH/AppData/Roaming/Microsoft/Windows/Start Menu'/
+lrwxrwxrwx 1 snavnath 1049089      61 Jul 30 19:52  Templates -> /c/Users/SNAVNATH/AppData/Roaming/Microsoft/Windows/Templates/
+drwxr-xr-x 1 snavnath 1049089       0 Jul 30 19:53  Videos/
+drwxr-xr-x 1 snavnath 1049089       0 Aug  2 17:28  assignments/
+drwxr-xr-x 1 snavnath 1049089       0 Aug  4 20:18  my-repo/
+-rw-r--r-- 1 snavnath 1049089 1339392 Jul 30 19:52  ntuser.dat.LOG1
+-rw-r--r-- 1 snavnath 1049089  786432 Jul 30 19:52  ntuser.dat.LOG2
+-rw-r--r-- 1 snavnath 1049089      20 Jul 30 19:52  ntuser.ini
+drwxr-xr-x 1 snavnath 1049089       0 Jul 31 14:14  project_dir/
+
+
+Display the size of the file in human readable format
+-->
+snavnath@LIN25006084 MINGW64 ~/assignments (master)
+$ ls -lh
+total 2.1M
+-rw-r--r-- 1 snavnath 1049089  141 Jul 31 11:12  README.txt
+-rw-r--r-- 1 snavnath 1049089   32 Jul 31 10:28  assign.html
+-rw-r--r-- 1 snavnath 1049089   29 Jul 31 11:13  java.js
+-rw-r--r-- 1 snavnath 1049089   16 Jul 31 11:02  project.css
+-rw-r--r-- 1 snavnath 1049089 792K Aug  2 16:54 'sec 0.docx'
+-rw-r--r-- 1 snavnath 1049089 304K Aug  2 16:54 'section 1.docx'
+-rw-r--r-- 1 snavnath 1049089 516K Aug  2 16:55 'section 2.docx'
+-rw-r--r-- 1 snavnath 1049089 525K Aug  2 16:57 'section 3.docx'
+
+
+
+Show all files and folders including hidden one
+-->
+snavnath@LIN25006084 MINGW64 ~
+$  ls -la ~/
+ .bash_history
+ .cisco/
+ .dbshell
+ .gitconfig
+ .lesshst
+ .mongorc.js
+ .viminfo
+ .vscode/
+'3D Objects'/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Documents/
+ Downloads/
+ Favorites/
+ IntelGraphicsProfiles/
+ Links/
+'Local Settings'@
+ Music/
+'My Documents'@
+ NTUSER.DAT
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+'OneDrive - Capgemini'/
+ Pictures/
+ PrintHood@
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Videos/
+ assignments/
+ my-repo/
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+ project_dir/
+
+
+list directories recursively
+-->
+use ls -R to get recursive list of directories 
+
+
+Sort the files by size with largest at the top
+-->
+snavnath@LIN25006084 MINGW64 ~/assignments (master)
+$ ls -lS
+total 2144
+-rw-r--r-- 1 snavnath 1049089 810856 Aug  2 16:54 'sec 0.docx'
+-rw-r--r-- 1 snavnath 1049089 536641 Aug  2 16:57 'section 3.docx'
+-rw-r--r-- 1 snavnath 1049089 528363 Aug  2 16:55 'section 2.docx'
+-rw-r--r-- 1 snavnath 1049089 310995 Aug  2 16:54 'section 1.docx'
+-rw-r--r-- 1 snavnath 1049089    141 Jul 31 11:12  README.txt
+-rw-r--r-- 1 snavnath 1049089     32 Jul 31 10:28  assign.html
+-rw-r--r-- 1 snavnath 1049089     29 Jul 31 11:13  java.js
+-rw-r--r-- 1 snavnath 1049089     16 Jul 31 11:02  project.css
+
+
+Sort the files by last time modified displaying the newest first.
+-->
+snavnath@LIN25006084 MINGW64 ~/assignments (master)
+$ ls -lt
+total 2144
+-rw-r--r-- 1 snavnath 1049089 536641 Aug  2 16:57 'section 3.docx'
+-rw-r--r-- 1 snavnath 1049089 528363 Aug  2 16:55 'section 2.docx'
+-rw-r--r-- 1 snavnath 1049089 310995 Aug  2 16:54 'section 1.docx'
+-rw-r--r-- 1 snavnath 1049089 810856 Aug  2 16:54 'sec 0.docx'
+-rw-r--r-- 1 snavnath 1049089     29 Jul 31 11:13  java.js
+-rw-r--r-- 1 snavnath 1049089    141 Jul 31 11:12  README.txt
+-rw-r--r-- 1 snavnath 1049089     16 Jul 31 11:02  project.css
+-rw-r--r-- 1 snavnath 1049089     32 Jul 31 10:28  assign.html
+
+
+
+
+Diplay the location of a program/command, where it is installed.
+-->
+which [-a] [-p path] command 
+whereis command 
+
+
+Which command is used to switch directory from one to another
+-->
+use cd command 
+It is a command-line shell command used to change the current working directory in various operating systems
+
+
+List all the environment variables set for the current shell environment
+-->
+env command and printenv command are used to find all environment variables  
+
+Below are some of the most common environment variables:
+USER - The current logged in user.
+HOME - The home directory of the current user.
+EDITOR - The default file editor to be used. This is the editor that will be used when you type edit in your terminal.
+SHELL - The path of the current user’s shell, such as bash or zsh.
+LOGNAME - The name of the current user.
+PATH - A list of directories to be searched when executing commands. When you run a command the system will search those directories in this order and use the first found executable.
+LANG - The current locales settings.
+TERM - The current terminal emulation.
+
+
+Did you notice something in the output of "env" command?
+-->
+snavnath@LIN25006084 MINGW64 ~
+$ env
+USERDOMAIN=CORP
+OS=Windows_NT
+COMMONPROGRAMFILES=C:\Program Files\Common Files
+PROCESSOR_LEVEL=6
+PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+CommonProgramW6432=C:\Program Files\Common Files
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+MSYSTEM_CARCH=x86_64
+DISPLAY=needs-to-be-defined
+HOSTNAME=LIN25006084
+PUBLIC=C:\Users\Public
+CONFIG_SITE=/etc/config.site
+EXEPATH=C:\Users\SNAVNATH\AppData\Local\Programs\Git
+MSYSTEM_CHOST=x86_64-w64-mingw32
+UATDATA=C:\WINDOWS\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+USERNAME=snavnath
+LOGONSERVER=\\WADINBLR06
+PROCESSOR_ARCHITECTURE=AMD64
+LOCALAPPDATA=C:\Users\SNAVNATH\AppData\Local
+COMPUTERNAME=LIN25006084
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+!::=::\
+SYSTEMDRIVE=C:
+USERPROFILE=C:\Users\SNAVNATH
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+SYSTEMROOT=C:\WINDOWS
+USERDOMAIN_ROAMINGPROFILE=CORP
+OneDriveCommercial=C:\Users\SNAVNATH\OneDrive - Capgemini
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
+PWD=/c/Users/SNAVNATH
+SSH_ASKPASS=/mingw64/libexec/git-core/git-gui--askpass
+HOME=/c/Users/SNAVNATH
+TMP=/tmp
+LC_CTYPE=en_US.UTF-8
+TERM_PROGRAM=mintty
+TERM_PROGRAM_VERSION=3.5.0
+MSYSTEM_PREFIX=/mingw64
+OneDrive=C:\Users\SNAVNATH\OneDrive - Capgemini
+ZES_ENABLE_SYSMAN=1
+PROCESSOR_REVISION=8c01
+FPS_BROWSER_USER_PROFILE_STRING=Default
+TMPDIR=/tmp
+GPPT_LOGFOLDER=C:\SCCM_logs
+GPPT_INSTALLFOLDER=c:\Installers
+USERDNSDOMAIN=corp.capgemini.com
+NUMBER_OF_PROCESSORS=8
+ProgramW6432=C:\Program Files
+COMSPEC=C:\WINDOWS\system32\cmd.exe
+APPDATA=C:\Users\SNAVNATH\AppData\Roaming
+SHELL=/usr/bin/bash
+TERM=xterm
+WINDIR=C:\WINDOWS
+MINGW_CHOST=x86_64-w64-mingw32
+ProgramData=C:\ProgramData
+SHLVL=1
+PLINK_PROTOCOL=ssh
+ACLOCAL_PATH=/mingw64/share/aclocal:/usr/share/aclocal
+PROGRAMFILES=C:\Program Files
+MANPATH=/mingw64/local/man:/mingw64/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man
+ORIGINAL_TEMP=/tmp
+ORIGINAL_TMP=/tmp
+ALLUSERSPROFILE=C:\ProgramData
+TEMP=/tmp
+DriverData=C:\Windows\System32\Drivers\DriverData
+MSYSTEM=MINGW64
+MINGW_PREFIX=/mingw64
+SESSIONNAME=Console
+ProgramFiles(x86)=C:\Program Files (x86)
+PATH=/c/Users/SNAVNATH/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/SNAVNATH/bin:/c/Program Files/AdoptOpenJDK/jdk-15.0.0.36-hotspot/bin:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Users/SNAVNATH/AppData/Local/Microsoft/WindowsApps:/cmd:/c/Users/SNAVNATH/AppData/Local/Programs/Microsoft VS Code/bin:/usr/bin/vendor_perl:/usr/bin/core_perl
+PS1=\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$
+HOMEDRIVE=C:
+PKG_CONFIG_PATH=/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig
+INFOPATH=/usr/local/info:/usr/share/info:/usr/info:/share/info
+HOMEPATH=\Users\SNAVNATH
+ORIGINAL_PATH=/mingw64/bin:/usr/bin:/c/Users/SNAVNATH/bin:/c/Program Files/AdoptOpenJDK/jdk-15.0.0.36-hotspot/bin:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Users/SNAVNATH/AppData/Local/Microsoft/WindowsApps:/cmd:/c/Users/SNAVNATH/AppData/Local/Programs/Microsoft VS Code/bin
+GPPT_CACHEFOLDER=C:\Windows\ccmcache
+_=/usr/bin/env
+
+
+
+Which command is used to print the text or any variables value in the Console/Terminal?
+-->
+echo command
+snavnath@LIN25006084 MINGW64 ~
+$ echo "hello"
+hello
+
+
+Print the value of the env variable "PATH" on the console
+-->
+echo $PATH
+PATH=/c/Users/SNAVNATH/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/SNAVNATH/bin:/c/Program Files/AdoptOpenJDK/jdk-15.0.0.36-hotspot/bin:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Users/SNAVNATH/AppData/Local/Microsoft/WindowsApps:/cmd:/c/Users/SNAVNATH/AppData/Local/Programs/Microsoft VS Code/bin:/usr/bin/vendor_perl:/usr/bin/core_perl
+
+
+Is linux a case-sensitive operating system?
+-->
+ Linux is case sensitive because 'a' and 'A' are different as far as the OS is concerned.
+Linux. It is an open-source operating system. It is free. The file names are case-sensitive.
+
+Is, "Ls" same as "ls"?
+-->
+yes it is same.
+
+Display your currently logged in user
+-->
+snavnath@LIN25006084 MINGW64 ~
+$ whoami
+snavnath
+
+
+how do you change the currrently logged in user to another user?
+-->
+The su command lets you switch the current user to any other user.
+
+
+Which command is used to leave a shell environment that you are currently logged in to?
+-->
+exit command  is used to exit the shell where it is currently running or logged in.
+
+
+How do you reboot the system?
+-->
+$ sudo shutdown -r now
+
+
+How do you shutdown the system?
+-->
+$ sudo shutdown -r now
+$ sudo shutdown -P now
+
+
+Display all the major running processes in the system
+-->
+ps command to display information about all running process.
+snavnath@LIN25006084 MINGW64 ~
+$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1178    1177    1178      14056  pty0     5416117 13:38:23 /usr/bin/bash
+     1263    1178    1263       9848  pty0     5416117 14:02:23 /usr/bin/ps
+     1177       1    1177       1428  ?        5416117 13:38:23 /usr/bin/mintty
+
+
+Understand the output of command used in above question of displaying processes, explain the meaning of each column and what data it displays?
+PID - The process ID. Usually, when running the ps command, the most important information the user is looking for is the process PID. Knowing the PID allows you to kill a malfunctioning process .
+TTY - The name of the controlling terminal for the process.
+UID - The user ID. It is unique for each user.
+TIME - The cumulative CPU time of the process, shown in minutes and seconds.
+CMD - The name of the command that was used to start the process.
+
+
+Display the name of the system kernel
+-->
+snavnath@LIN25006084 MINGW64 ~
+$ uname -s
+MINGW64_NT-10.0-19042
+
+
+display the kernel release number
+-->
+snavnath@LIN25006084 MINGW64 ~
+$ uname -r
+3.1.7-340.x86_64
+
+
+display the machine type of the current kernel
+-->
+snavnath@LIN25006084 MINGW64 ~
+$ uname -m
+x86_64
+
+
+Display the name of the operating system that the kernel is running on
+-->
+snavnath@LIN25006084 MINGW64 ~
+$ uname -o
+Msys
+
+
+Display all info that uname command can show.
+-->
+snavnath@LIN25006084 MINGW64 ~
+$ uname --help
+Usage: uname [OPTION]...
+Print certain system information.  With no OPTION, same as -s.
+
+  -a, --all                print all information, in the following order,
+                             except omit -p and -i if unknown:
+  -s, --kernel-name        print the kernel name
+  -n, --nodename           print the network node hostname
+  -r, --kernel-release     print the kernel release
+  -v, --kernel-version     print the kernel version
+  -m, --machine            print the machine hardware name
+  -p, --processor          print the processor type (non-portable)
+  -i, --hardware-platform  print the hardware platform (non-portable)
+  -o, --operating-system   print the operating system
+      --help     display this help and exit
+      --version  output version information and exit
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report any translation bugs to <https://translationproject.org/team/>
+Full documentation <https://www.gnu.org/software/coreutils/uname>
+or available locally via: info '(coreutils) uname invocation'
+
+
+Display the name of directory that you are currently pointing to
+-->
+snavnath@LIN25006084 MINGW64 ~/assignments (master)
+$ pwd
+/c/Users/SNAVNATH/assignments
+
+
+change the current directory to another directory that you have in your system.
+-->
+snavnath@LIN25006084 MINGW64 ~
+$ cd assignments
+snavnath@LIN25006084 MINGW64 ~/assignments (master)
+$ cd project
+snavnath@LIN25006084 MINGW64 ~/assignments/project (master)
+
+
+Go up one directory
+-->
+snavnath@LIN25006084 MINGW64 ~/assignments/project (master)
+$ cd ../
+snavnath@LIN25006084 MINGW64 ~/assignments (master)
+
+
+Return to last directory
+-->
+snavnath@LIN25006084 MINGW64 ~/assignments (master)
+$ cd ..
+snavnath@LIN25006084 MINGW64 ~
+$
+
+
+change the current directory to home(logged in user's) directory
+-->
+snavnath@LIN25006084 MINGW64 ~/assignments (master)
+$ cd 
+snavnath@LIN25006084 MINGW64 ~
+$
+
+
+How to check all the command used from the prompt (Command History)
+-->
+snavnath@LIN25006084 MINGW64 ~
+$ history
+    1  mkdir project_dir
+    2  cd project_dir
+    3  touch index.html
+    4  git status
+    5  git add .
+    6  clear
+    7 history
+
+
+In which file the history of commands are stored in?
+-->
+In Bash, your command history is stored in a file ( . bash_history ) in your home directory.
+
+
+How many lines of history does the system keep and from where you can change it?
+-->
+No limit 
+
+
+How can you modify bash's history behaviour
+-->
+use of  PROMPT_COMMAND
+
+Display all the commands entered so far, now, try to run a particular command from the history list without typing that command.
+-->
+snavnath@LIN25006084 MINGW64 ~
+$ history
+    1  mkdir project_dir
+    2  cd project_dir
+    3  touch index.html
+    4  git status
+    5  git add .
+    6  clear
+    7 history
+snavnath@LIN25006084 MINGW64 ~
+$ !2
+cd project_dir
+snavnath@LIN25006084 MINGW64 ~/project_dir (master)
+
+
+
+NOTE:- TAB key is your friend when it comes to command completion and having long file and directory names autocompleted at the bash prompt for you. JUST BE LAZY AND USE TAB KEY FOR AUTO COMPLETION ;-)
+
+
+What are the different types of shell and where are they used and how do we use them?
+-->
+Types of Shell:
+
+The C Shell –
+Denoted as csh 
+Bill Joy created it at the University of California at Berkeley. It incorporated features such as aliases and command history. It includes helpful programming features like built-in arithmetic and C-like expression syntax.
+In C shell:
+Command full-path name is /bin/csh,
+Non-root user default prompt is hostname %,
+Root user default prompt is hostname #. 
+
+The Bourne Shell –
+Denoted as sh 
+It was written by Steve Bourne at AT&T Bell Labs. It is the original UNIX shell. It is faster and more preferred. It lacks features for interactive use like the ability to recall previous commands. It also lacks built-in arithmetic and logical expression handling. It is default shell for Solaris OS.
+For the Bourne shell the:
+Command full-path name is /bin/sh and /sbin/sh,
+Non-root user default prompt is $,
+Root user default prompt is #. 
+
+The Korn Shell
+It is denoted as ksh 
+It Was written by David Korn at AT&T Bell LabsIt is a superset of the Bourne shell.So it supports everything in the Bourne shell.It has interactive features. It includes features like built-in arithmetic and C-like arrays, functions, and string-manipulation facilities.It is faster than C shell. It is compatible with script written for C shell.
+For the Korn shell the:
+Command full-path name is /bin/ksh,
+Non-root user default prompt is $,
+Root user default prompt is #. 
+
+GNU Bourne-Again Shell –
+Denoted as bash 
+It is compatible to the Bourne shell. It includes features from Korn and Bourne shell.
+For the GNU Bourne-Again shell the:
+Command full-path name is /bin/bash
+
+
+What is the difference between login shell and non-login shell?
+-->
+A script that is executed from the terminal is run in a non-login, non-interactive shell session whereas a session that is started with SSH for instance is an interactive login shell session.
+A script that runs in its own non-interactive sub-shell that runs to execute another script and then closes immediately afterwards represents a Non-interactive non-login shell.
+It is not common to encounter a non-interactive login shell, for instance, launch :
+echo command | ssh server
+When ssh is executed without a command, it starts a login shell. If the standard input (stdin) of the ssh is not a terminal(tty), it starts a non-interactive shell.
+ This has some consequences on which files are accessed or read to initialize the shell session.
+
+
+
+How do we start login shell and non-login shell?
+-->
+1) Login Shell:
+    1.Press the menu button in the top-right corner of the window and select Preferences.
+    2.In the sidebar, select your current profile in the Profiles section.
+    3.Select Command.
+    4.Under the Command label, select Run command as a login shell.
+2)Non Login Shell:
+If the output is the name of our shell, prepended by a dash, then it is a login shell. For example -bash, -su etc.
+A Non login shell is started by a program without a login. In this case, the program just passes the name of the shell executable.
+
+
+
+What happens when you start a login shell (which files are read and used and Why)?
+-->
+When Bash is invoked as an interactive login shell, or as a non-interactive shell with the --login option, it first reads and executes commands from the file /etc/profile, if that file exists. 
+After reading that file, it looks for ~/.bash_profile, ~/.bash_login, and ~/.profile, in that order, and reads and executes commands from the first one that exists and is readable. 
+The --noprofile option may be used when the shell is started to inhibit this behavior.
+When an interactive login shell exits, or a non-interactive login shell executes the exit builtin command, Bash reads and executes commands from the file ~/.bash_logout, if it exists. 
+
+
+What happens when you start a non-login shell (Which files are read and used and Why)?
+-->
+When an interactive shell that is not a login shell is started, Bash reads and executes commands from ~/.bashrc, if that file exists. 
+This may be inhibited by using the --norc option. The --rcfile file option will force Bash to read and execute commands from file instead of ~/.bashrc.
+So, typically, your ~/.bash_profile contains the line
+if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+after (or before) any login-specific initializations. 
+
+
+What are Shell Configuration Files, why do we need it?
+-->
+Shell Configuration Files are those files which gets executed automatically when you log in and .out of a shell.
+To configure Bash to use our custom settings we need to configure various configuration files that are used. 
+Some of these files are only executed at "login", others are executed each time a new instance of your Bash shell is started.
+
+Explain the Order of file usage from the system/user's home directory when user logs in to the System.
+-->
+
+
+What are Shell Variables, list major shell variables and what do they represent?
+-->
+Shell Variables − A shell variable is a special variable that is set by the shell and is required by the shell in order to function correctly. 
+Some of these variables are environment variables whereas others are local variables.
+1. $0:The filename of the current script.
+2.  $n:These variables correspond to the arguments with which a script was invoked. Here n is a positive decimal number corresponding to the position of an argument (the first argument is $1, the second argument is $2, and so on).
+3. $#:The number of arguments supplied to a script.
+4. $*:All the arguments are double quoted. If a script receives two arguments, $* is equivalent to $1 $2.
+5. $@:All the arguments are individually double quoted. If a script receives two arguments, $@ is equivalent to $1 $2.
+6. $?:The exit status of the last command executed.
+7. $$:The process number of the current shell. For shell scripts, this is the process ID under which they are executing.
+8. $!:The process number of the last background command.
+
+
+How we see all our env variables?
+-->
+The printenv command list the values of the specified environment VARIABLE(s).
+Environment Variables − An environment variable is available to any child process of the shell. 
+Some programs need environment variables in order to function correctly. 
+Usually, a shell script defines only those environment variables that are needed by the programs that it runs.
+
+How we see all env variables in alphabical order?
+-->To see a complete list of environment variables, use this command from any location: get-childitem env:* 
+The sort-object cmdlet in the second step of the pipeline sorts the objects passed to it by the first step of the pipeline in ascending alphabetical order by the value of the Key property.
+
+
+What Format does the env var and its values are stored?
+-->
+An Environment variable is stored in name /value pair.
+
+How do you create your own varible?
+-->
+
+How do you start a new bash shell?
+-->
+
+Difference between Local/Shell variables to Global Variable
+-->
+Local variable is declared inside a function whereas Global variable is declared outside the function. .
+Local variables are stored on the stack whereas the Global variable are stored on a fixed location decided by the compiler.
+
+
+Making a variable accessible from other the shell in the system.
+-->
+
+Show the real life use case of exporting a variable
+-->
+
+Convert the above script file into a command, The file should run with "myappp" instead of "myapp.sh"
+-->
+
+What is Globbing? Explain in depth with examples?
+-->
+File globbing is a feature provided by the UNIX/Linux shell to represent multiple filenames by using special characters called wildcards with a single file name.
+ A wildcard is essentially a symbol which may be used to substitute for one or more characters.
+
+List all entries with extension ".sh"
+-->
+snavnath@LIN25006084 MINGW64 ~/project_dir (master)
+$ ls *.sh
+hello.sh  new.sh  word.sh
+
+
+List all entries with numbers in it.
+-->
+snavnath@LIN25006084 MINGW64 ~/project_dir (master)
+$ ls -n
+total 42
+-rw-r--r-- 1 5416117 1049089 31097 Aug  9 13:17 'Basic Unix Command Line Assignment 1.txt'
+-rw-r--r-- 1 5416117 1049089     0 Aug  7 09:52  hello.sh
+-rw-r--r-- 1 5416117 1049089    51 Jul 31 14:14  index.html
+-rw-r--r-- 1 5416117 1049089    21 Aug  8 22:43  new.txt
+-rwxr-xr-x 1 5416117 1049089  4969 Aug  9 13:36  shellscriptassignments.txt*
+-rw-r--r-- 1 5416117 1049089     0 Aug  7 09:52  word.sh
+
+
+
+List all entries that starts with a character and ends with a number
+-->
+snavnath@LIN25006084 MINGW64 ~/project_dir (master)
+$ ls -l s*
+-rwxr-xr-x 1 snavnath 1049089 4969 Aug  9 13:36 shellscriptassignments.txt*
+
+snavnath@LIN25006084 MINGW64 ~/project_dir (master)
+$ ls -l *9
+ls: cannot access '*9': No such file or directory
+
+
+
+
+List all entries that name length more than 5 characters
+-->snavnath@LIN25006084 MINGW64 ~/project_dir (master)
+$ ls|awk 'length($0)>=5{print $0}'
+Basic Unix Command Line Assignment 1.txt
+hello.sh
+index.html
+new.txt
+shellscriptassignments.txt*
+word.sh
+
+
+What is Quoting? and Why do we need it?
+-->
+Quoting is an important technique used to include information from outside sources in academic writing. 
+When using quotations, it is important that you also cite the original reference that you have taken the quotation from, as your citations provide your reader with a map of the research that you have done.
+
+Write few(minimum 3) unique examples that shows, how a particular problem is solved using Quoting.
+-->
+
+How do you find a particular files/directories based on a particular search criteria?
+-->
+HINT:- look for commands -> locate, find and whereis
+
+Write major difference between locate, find and where is?
+-->
+Locate is a Unix utility which serves to find files on filesystems. ...
+The which command searches through the directories that are defined in the $PATH environment variable for a given filename. ...
+The find command is a more aggressive search tool than locate or which.
+Both the command “find” and “locate” are handy tools to search for files and directories in Linux. 
+Locate is bit fast than find. But it needs to keep its database updated to provide you with the most accurate results. 
+Whereas find has more options which cater to user to find exact file/directories and perform more operations like delete on the found files/directories.
+ Also find has no database to update, making the results current.
+
+
+How Globbing is different from locate, find and where is?
+-->
+File globbing is a feature provided by the UNIX/Linux shell to represent multiple filenames by using special characters called wildcards with a single file name.
+File globbing is the operation that recognizes these patterns and does the job of file path expansion. 
+wildcard characters : 
+1) asterisk (*) 
+* is used to match any number of characters(zero or more), to understand more you can refer to the example taken above. 
+2) question mark(?) 
+? is used to match exactly one character. 
+
+
+Explain the Linux File System.
+-->
+A Linux file system is a structured collection of files on a disk drive or a partition.
+Linux file system is generally a built-in layer of a Linux operating system used to handle the data management of the storage. 
+It helps to arrange the file on the disk storage.
+It manages the file name, file size, creation date, and much more information about a file.
+
+
+Explain absolute and Relative Paths
+-->
+An absolute path is defined as specifying the location of a file or directory from the root directory(/). 
+In other words,we can say that an absolute path is a complete path from start of actual file system from / directory.
+Relative path is defined as the path related to the present working directly(pwd). It starts at your current directory and never starts with a / .
+
+
+
+What are the different ways of creating a File in linux System? Write an example of each and the difference between them.
+-->
+1. cat command
+It is the most universal command/tool for creating files on Linux systems. We cannot edit a file using the cat command. Major operations that can be done using it are as follows:
+To create files and write the data into them
+cat >file1
+This command creates a new file file1 (in write mode) if it doesn’t exist in the present working directory. If any file with file name file1 exists in the current directory then it is overwritten. 
+2. touch command
+We can create an empty file (or multiple empty files) using this command. But its main purpose is to change or update the time-stamp of a file. Major operations that can be done using it are as follows:
+Creating a file
+touch filea
+3. nano command
+It may/may not be found in all distributions of LINUX. We can create as well as edit files.
+Note: To exit nano Text Editor press ctrl + x.
+nano file_1
+4. gedit command
+“gedit” stands for GNOME text editor, it’s a standard default text editor found in any system with a GNOME desktop environment including Ubuntu, Fedora, Debian, CentOS, and Red Hat. Using gedit we can create as well as write/edit the text files.
+Create a file
+gedit file_2
+
+
+In how many ways we can delete the files from linux system? write an example of each and the difference between them.
+-->
+1.rm command
+The rm command stands for "remove" is used to delete or remove files and directories.
+The syntax for rm command
+rm  <file_name>
+2.unlink command
+Not so popular. To remove a single file permanently, we can use unlink command.
+unlink {file-name}
+
+
+Archiving files using linux command, write a command to archive set of files from linux commands.
+-->
+Tar is a Unix command representative TAPE Archive (tape archive). It is used to combine or store multiple files (same or differentsizes) into one file. 
+There are four main modes of operation in the tar utility.
+c – Create an archive from a file or directory
+x – Extract archive
+r – Append file to archive
+t - List the contents of the archive
+let us create a new tar archive of the the directory ostechnix.
+$ tar cf ostechnix.tar ostechnix/
+Here, c flag refers create new archive and f refers the file nam
+$ tar cf archive.tar file1 file2 file 3
+
+
+Extract the archived files from the above step.
+-->
+To extract an archive in the current directory, simply do:
+$ tar xf ostechnix.tar
+We can also extract the archive in a different directory using C flag(capital c). For example, the following command extracts the given archive file in Downloads directory.
+$ tar xf ostechnix.tar -C Downloads/

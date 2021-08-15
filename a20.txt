@@ -1,0 +1,6 @@
+#assignment 20
+echo "This is displaying on the console"
+echo "This is going into the black hole" >> /dev/null
+
+dell@dell:~/Desktop$ sh hello.sh
+This is displaying on the console

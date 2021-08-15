@@ -1,0 +1,10 @@
+#! /usr/bin/bash
+#creating list assignment 9
+
+SERVERLIST=( 'HTTP' ' sql' 'html' 'jetty' )
+echo "${SERVERLIST[@]}"
+dell@dell:~/Documents$ sh ss1.sh
+HTTP
+sql
+html
+jetty

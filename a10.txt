@@ -1,0 +1,24 @@
+#! /usr/bin/bash
+#assignment 10
+#  -s	do not echo input coming from a terminal
+
+
+read -p 'username : ' user_var
+read -p 'password : ' pass_var
+echo
+echo "username : $user_var"
+echo "password : $pass_var"
+
+dell@dell:~/Desktop$ sh hello.sh
+username : new
+hello.sh: 7: read: Illegal option -s
+
+username : new
+password : 
+dell@dell:~/Desktop$ sh hello.sh
+username : new
+password : 123
+
+username : new
+password : 123
+dell@dell:~/Desktop$ 

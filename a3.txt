@@ -1,0 +1,11 @@
+#! /usr/bin/bash
+#assignment 3
+
+#set commond will set the parameters and echo command will print those parameters on terminal
+
+set v1 v2
+echo $*
+
+
+dell@dell:~/Desktop$ sh hello.sh
+v1 v2

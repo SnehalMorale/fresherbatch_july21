@@ -1,0 +1,8 @@
+#! /usr/bin/bash
+#assignment 4
+
+echo "This is a echo command"
+echo "this is 2nd sentence" >> /dev/null
+
+dell@dell:~/Desktop$ sh hello.sh
+This is a echo command

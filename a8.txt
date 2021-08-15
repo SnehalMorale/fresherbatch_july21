@@ -1,0 +1,18 @@
+#! /usr/bin/bash
+#assignment 8
+
+echo "enter ur details firstname, lastname and age:\ c"
+read FIRSTNAME
+read LASTNAME
+read USERAGE
+n=10
+age=" $USERAGE + $n " | bc
+echo " Hi, your name is "$FIRSTNAME $LASTNAME" and your current age is "$USERAGE". After 10 years your age will be "$age". bye! "
+
+dell@dell:~/Desktop$ sh file.sh
+enter ur details firstname, lastname and age:\ c
+ABC
+klmn
+10
+ Hi, your name is ABC klmn and your current age is 10. After 10 years your age will be 20. bye! 
+

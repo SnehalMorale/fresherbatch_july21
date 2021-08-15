@@ -1,0 +1,17 @@
+#assignment 15
+echo "Enter the number for how many times the message should be displayed ."
+read n 
+count=1
+while [ $count -le $n ]
+do 
+echo "Hello , have a great day"
+count=`expr $count + 1`
+done
+
+dell@dell:~/Desktop$ sh hello.sh
+Enter the number for how many times the message should be displayed .
+3
+Hello , have a great day
+Hello , have a great day
+Hello , have a great day
+

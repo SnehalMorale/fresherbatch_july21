@@ -1,0 +1,16 @@
+#! /usr/bin/bash
+#assignment 11
+# 
+
+echo "guess the secret no. between 1 to 5: \c" 
+read -p 'number: ' num
+if [ $num -eq 1 ]
+then 
+echo "you guessed right !"
+fi
+
+dell@dell:~/Desktop$ sh hello.sh
+guess the secret no. between 1 to 5: number: 3
+dell@dell:~/Desktop$ sh hello.sh
+guess the secret no. between 1 to 5: number: 1
+you guessed right !

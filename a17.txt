@@ -1,0 +1,22 @@
+#assignment 17
+echo "writing herolist. press ctrl+d end editing"
+cat >> herolist.txt
+echo "reading herolist"
+cat herolist.txt
+echo "thank you for editing"
+date
+
+dell@dell:~/Documents$ sh ss1.sh
+writing herolist. press ctrl+d end editing
+krish
+reading herolist
+
+spiderman
+batman
+doremon
+oggy
+hatodi
+deep
+krish
+thank you for editing
+Sunday 08 August 2021 08:36:11 PM IST

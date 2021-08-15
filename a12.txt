@@ -1,0 +1,26 @@
+#! /usr/bin/bash
+#assignment 12
+ 
+echo "enter the no. between 1 to 3: \c" 
+read num
+if [ $num -eq 1 ]
+then 
+echo "you entered number $num right !"
+   elif [ $num -eq 2 ]
+   then 
+   echo "you entered number $num right !"
+       elif [ $num -eq 3 ]
+       then 
+       echo "you entered number $num right !"
+       else
+       echo "u have faied to read instruction"
+    fi
+
+
+dell@dell:~/Desktop$ sh hello.sh
+enter the no. between 1 to 3: 3
+you entered number 3 right !
+dell@dell:~/Desktop$ sh hello.sh
+enter the no. between 1 to 3: 4
+u have faied to read instruction
+dell@dell:~/Desktop$ 

@@ -1,0 +1,22 @@
+# Assigment 14
+set shelter food water
+echo "$@"
+echo "choose one of these items only: \c"
+read item
+case $item in 
+shelter)
+    echo "you have choose $item option."
+    ;; 
+food)
+    echo "you have choose $item option."
+    ;; 
+water)
+    echo "you have choose $item option."
+    ;; 
+    
+esac
+
+dell@dell:~/Desktop$ sh file.sh
+shelter food water
+choose one of these items only: water
+you have choose water option.

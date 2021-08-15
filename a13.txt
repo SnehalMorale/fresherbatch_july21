@@ -1,0 +1,39 @@
+# Assigment 13
+
+#list= ls *.sh
+for file in *
+do 
+    if [ -f $file ]
+    then
+        echo $file
+        cat $file
+        fi
+done
+
+dell@dell:~$ cd Documents
+dell@dell:~/Documents$ sh new.sh
+new.sh
+# Assigment 13
+
+#list= ls *.sh
+for file in *
+do 
+    if [ -f $file ]
+    then
+        echo $file
+        cat $file
+        fi
+done
+sample.sh
+sample file
+ss1.sh
+#tout-in action
+tput clear
+echo "total no of rows on screen=\c"
+tput lines
+echo "total no of cloumns on screen=\c"
+tput cols
+tput cup 15 20
+tput bold
+echo "this should bold"
+echo "\033[0mBye Bye"

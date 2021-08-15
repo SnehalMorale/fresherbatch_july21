@@ -1,0 +1,15 @@
+#! /usr/bin/bash
+#assignment 7
+
+TODAYSDATE= date
+echo $TODAYSDATE
+cd ..
+USERFILES= ls -u
+echo $USERFILES
+
+dell@dell:~/Desktop$ sh file.sh
+Saturday 07 August 2021 02:28:30 PM IST
+
+Desktop   Music      photos	if-then-else.sh  ss2.sh  foo
+Videos	  Documents  Public	sample		 barfoo  another-file
+Pictures  Downloads  Templates	if-then.sh	 bar	 my-file

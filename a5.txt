@@ -1,0 +1,17 @@
+#! /usr/bin/bash
+#assignment 5
+
+n1=10 
+n2=20
+echo "$n1" + "$n2 " | bc
+rm ss1.sh
+
+echo "$n1" \* "$n2 " | bc
+# to check exits status
+echo $?
+
+dell@dell:~/Desktop$ sh hello.sh
+30
+rm: cannot remove 'ss1.sh': No such file or directory
+200
+0

@@ -1,0 +1,8 @@
+# Assigment 16
+
+cat herolist 
+dell@dell:~/Desktop$ sh hello.sh
+batman
+catman
+spiderman
+oggy

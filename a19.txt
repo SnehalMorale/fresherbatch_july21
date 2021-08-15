@@ -1,0 +1,32 @@
+#assignment 19
+while true
+do
+cat menu
+echo "enter a num you want and you can exit by entering any other key."
+read value
+case $value in
+ "1" )
+ clear ;;
+ "2" )
+ clear ;;
+ #sh hello.sh
+ "3" )
+ clear ;;
+ #sh hello.sh
+ * )
+ exit ;;
+ esac
+done
+
+dell@dell:~/Desktop$ sh hello.sh
+1=Chinese
+2=Indian
+3=Italian
+enter a num you want and you can exit by entering any other key.
+
+1=Chinese
+2=Indian
+3=Italian
+enter a num you want and you can exit by entering any other key.
+5
+dell@dell:~/Desktop$

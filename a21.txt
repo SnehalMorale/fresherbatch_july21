@@ -1,0 +1,11 @@
+#assignment 21
+function script {
+echo "generated when function is run"
+}
+script
+echo "generated outside function"
+
+dell@dell:~/Desktop$ chmod +x hello.sh
+dell@dell:~/Desktop$ ./hello.sh
+generated when function is run
+generated outside function

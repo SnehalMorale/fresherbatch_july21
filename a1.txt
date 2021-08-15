@@ -1,0 +1,12 @@
+#! /usr/bin/bash
+#assignment 1
+echo $USER
+echo $HOME
+echo $HISTCONTROL
+echo $TERM
+
+ell@dell:~/Desktop$ sh file.sh
+dell
+/home/dell
+
+xterm-256color

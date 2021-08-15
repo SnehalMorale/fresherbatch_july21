@@ -1,0 +1,12 @@
+#assignment 18
+dell@dell:~/Desktop$ cat >> com.sh
+CPU\n|MEMORY\n|DISK
+
+while IFS=: read -r p
+do 
+echo $p
+done < com.sh
+dell@dell:~/Desktop$ sh hello.sh
+CPU
+|MEMORY
+|DISK

@@ -1,0 +1,22 @@
+#! /usr/bin/bash
+#assignment 2
+
+MYUSERNAME=Dell
+echo $MYUSERNAME
+
+MYPASSWORD=1234
+echo $MYPASSWORD
+
+STARTOFSCRIPT= date 
+echo $STARTOFSCRIPT
+
+ENDOFSCRIPT= date
+echo $ENDOFSCRIPT
+
+dell@dell:~/Desktop$ sh file.sh
+Dell
+1234
+Saturday 07 August 2021 02:20:53 PM IST
+
+Saturday 07 August 2021 02:20:53 PM IST
+

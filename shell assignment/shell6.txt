@@ -1,0 +1,88 @@
+#Assignment 6 
+Q1 Write a script to find out String is palindrome or not.
+clear
+echo "Enter a string to be entered:"
+read str
+echo
+len=`echo $str | wc -c`
+len=`expr $len - 1`
+i=1
+j=`expr $len / 2`
+while test $i -le $j
+do
+k=`echo $str | cut -c $i`
+l=`echo $str | cut -c $len`
+if test $k != $l
+then
+echo "String is not palindrome"
+exit
+fi
+i=`expr $i + 1`
+len=`expr $len - 1`
+done
+echo "String is palindrome"
+
+
+Q2Write a Shell script to calculate the gross salary of Rajesh whose Basic is input through keyboard. His DA is 34% of basic salary and HRA is 24% of Basic. PF is 11% of the basic.
+
+echo "Enter basic salary \c"
+read sal
+da=`expr $sal \* 34 / 100`
+hra=`expr $sal  \* 24  / 100`
+pf=`expr $sal \* 11 / 100`
+
+gsal=`expr $sal + $da + $hra - $pf`
+echo "Gross salary is :"$gsal
+
+
+
+Q3Write a shell script for accepting the following information and storing it in a file.
+CD No., Movie Name, Language, Price and Date of release
+
+echo "Enter a CD no:"
+read cdn
+echo "Enter a Movie Name:"
+read mn
+echo "Enter a Language:"
+read la
+echo "Enter a Price:"
+read pri
+echo "Enter a Date of Release:"
+read re
+echo "CD no is:"$cdn >> movie
+echo "Movie Name is:"$mn >> movie
+echo "Language is:"$la >> movie
+echo "Price is :"$pri >> movie
+echo "Date of Release :"$re >> movie
+echo "Data is successfully stored."
+
+
+
+Q4 Write a scripts which copies the content of file1 to file2 without using cp command It should check If file has a read permissions if not it should print an error message. If file2 exits then it should ask the user whether he wants to overwrite it.
+
+
+# ! /bin/bash
+echo "enter the filenames which you want to copy:"
+read f1 f2
+cat $f1 >> $f2
+if [ ! -r $f1 ]
+then
+      echo "file is not readable. give permission to read"
+fi
+
+   if [ -f $f2 ]
+   then 
+         echo "file $f2 exist. if you want to overwrite file type y "
+         read ans
+      if  [ ans == y ]
+      then  
+            cat $f1 >> $f2 
+      fi
+  fi
+
+Q5Write a shell scripts that delete all files in current directory with 0 byte.
+
+
+find . -type f -size 0 -exec rm -f {} \; # sub directories
+find .  -maxdepth 1 -type f -size 0 -exec rm -f {} \; # current  directory  if maxdepth not work use * -prune 
+

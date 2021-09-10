@@ -1,0 +1,79 @@
+Assignment 2
+
+Q1Write a shell script to calculate the area of rectangle. It should take the value from the command line
+
+echo "enter  length of rectangle"
+read l
+echo "enter  breadth of rectangle"
+read b
+a= `expr  $l \* $b  | bc` 
+echo " area of rectangle  =" $a
+
+Q2Write a shell script to take two numbers from command line and show result of dividing small number with bigger number. Also note that it should not accept zero or negative number. If user enter zero or negative number then it should prompt to input correct number after displaying proper message.
+# ! /bin/bash
+echo "enter the first number:"
+read n1 
+if [  $n1 -lt 0  ]
+then
+      echo "enter the correct number"
+fi
+echo "enter the second number:"
+read n2
+if [  $n2 -lt 0  ]
+then
+      echo "enter the correct number"
+fi
+if [ $n1 -gt $n2 ]
+then
+     ans=$((n1 / n2 ))
+echo $ans
+else
+      ans=$((n1 / n2 ))
+echo $ans
+fi    
+
+Q3Write a Unix Shell Script which prints the following
+a. Current home directory.
+b. Current user name.
+c. The message "Today is :" with current date in MM/dd/yy format
+d. The message "No of users logged in :" with total no of current logged in users
+e. The message "Terminal :” With you own terminal number
+
+
+$HOME
+$USERNAME
+d=$(date +"%m/%d/%Y")
+echo "Today is : $d"
+echo "No of users logged in :   $(who)" #LOGNAME
+echo  "Terminal :" $$
+
+Q4 Write a shell script to create a command line calculator.
+e.g. input : mycal 5 + 5 Result : 10 , input : mycal 5 / 5 result : 1
+
+echo "Enter input (eg. mycal 5 + 5 ) :"
+read a n1 ch n2
+# calculator operations
+echo $ch
+
+case $ch in
+  +)res=`echo $n1 + $n2  | bc` ;;
+  -)res=`echo $n1 - $n2 | bc`  ;;
+  \*)res=`echo $n1 \* $n2 | bc` ;;
+  /)res=`echo "scale=2; $n1 / $n2" | bc` ;;
+  esac
+
+echo "Result : $res"
+
+Q5Write a shell script that that takes as command line input a number N and a Word. it then prints the word n times., one word per line
+
+echo "Enter the number for how many times word should be displayed ."
+read n
+echo "Enter word"
+read word
+echo "the word is going to display"
+count=1
+while [ $count -le $n ]
+do
+echo $word
+count=`expr $count + 1`
+done

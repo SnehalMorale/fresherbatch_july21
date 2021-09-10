@@ -1,0 +1,90 @@
+# Assignment 8 
+Q1Write a shell script to list all the files of the current directory having read and write permission to the user.
+
+for file in *
+do
+if [ -f $file ]# check it is file
+then
+if [ -r $file -a -w $file ]# check read and write permission
+then
+ls -l $file
+fi
+fi
+done
+
+Q2Write a shell script to checks if name given is file or directory and if it is file then it should display content and if it is a directory then it should display the list.
+
+echo "enter the filename"
+read file
+if [ -f $file ]# check it is file
+then
+cat $file
+if [ -d $file ]# check it is file
+then
+ls -l  $file
+fi
+fi
+
+Q3Write a shell script to accept two filenames and check if both exits. If second file exists then append the content of first file to second file.
+
+echo "enter the two filenames"
+read f1 f2
+if [ -f $f1 -a -f $f2 ]# check it is file
+then
+if [ -f $f1 ]
+then 
+$f1 >> $f2
+fi
+fi
+
+Q4 Write a shell script to input a number & display in words.
+
+echo -n "Enter number : "
+read n
+ 
+len=$(echo $n | wc -c)
+len=$(( $len - 1 ))
+ 
+echo "Your number $n in words : "
+for (( i=1; i<=$len; i++ ))
+do
+   # get one digit at a time
+    digit=$(echo $n | cut -c $i)
+   # use case control structure to find digit equivalent in words 
+    case $digit in
+        0) echo -n "zero " ;;
+        1) echo -n "one " ;;
+        2) echo -n "two " ;;
+        3) echo -n "three " ;;
+        4) echo -n "four " ;;
+        5) echo -n "five " ;;
+        6) echo -n "six " ;;
+        7) echo -n "seven " ;;
+        8) echo -n "eight " ;;
+        9) echo -n "nine " ;;
+    esac	
+done
+ 
+# just print new line
+echo ""
+
+
+Q5Write a shell script to input a file name and display rights.
+
+echo -n "Enter file name : "
+read file
+ 
+# find out if file has write permission or not
+[ -w $file ] && W="Write = yes" || W="Write = No"
+ 
+# find out if file has excute permission or not
+[ -x $file ] && X="Execute = yes" || X="Execute = No"
+ 
+# find out if file has read permission or not
+[ -r $file ] && R="Read = yes" || R="Read = No"
+ 
+echo "$file permissions"
+echo "$W"
+echo "$R"
+echo "$X"
+

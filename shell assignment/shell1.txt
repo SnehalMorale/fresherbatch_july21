@@ -1,0 +1,97 @@
+#Assignment1
+
+Q1. Write a shell script to calculate simple interest.
+
+echo "enter principle amount:"
+read p
+echo "enter duration/period:"
+read n
+echo "enter interest rate"
+read r
+t=`expr $p \* $n \* $r`
+
+s=`expr $t / 100`
+echo "simple interest is =" $s
+
+Q2Write a shell script to calculate salary from given basic.
+Salary = basic + dp + da +hra +ma –pf
+basic – to be taken as input
+dp - 50 % of basic
+da - 35 % of (basic + dp)
+hra - 8 % of (basic + dp)
+ma - 3 % of (basic + dp)
+pf - 10% of (basic + dp)
+
+echo "Enter basic salary :\c"
+read basic
+
+dp=$(expr $basic \* 50 / 100 )
+da=$(expr $(expr $basic + $dp ) \* 35 / 100 )
+hra=$(expr $(expr $basic + $dp ) \* 8 / 100 )
+ma=$(expr $(expr $basic + $dp ) \* 3 / 100 )
+pf=$(expr $(expr $basic + $dp ) \* 10 / 100 )
+
+salary=$(expr $basic + $dp + $da + $hra + $ma - $pf)
+echo "Salary : $salary"
+
+Q3 Write a shell script to calculate the average of a set of N number.
+echo "Enter size :\c"
+read size
+count=0
+sum=0
+
+while [ $count -lt $size ]
+do
+      echo "Enter numbers : \c"
+      read number
+      sum=$(expr $sum + $number)
+      count=$(expr $count + 1)
+done
+
+avg=$(expr $sum \/ $size )
+echo "The average of the number are $avg"
+
+Q4Write a Unix shell script to find the sum of number to given number.
+e.g. if entered number is 5 then 1+2+3+4+5
+
+echo "Enter number :\c"
+read number
+sum=0
+count=1
+
+while [ $number -ge $count ]
+do
+      sum=$(expr $sum + $count)
+      count=$(expr $count + 1)
+done
+
+echo "The sum of the given number is :$sum"
+
+Q5 Write a shell script to perform like calculator. It should ask for the number and operand from the user.
+# !/bin/bash
+# Take user Input
+
+echo "Enter Two numbers : "
+read a b
+
+# Input type of operation
+
+echo "Enter Choice :"
+echo "1. Addition"
+echo "2. Subtraction"
+echo "3. Multiplication"
+echo "4. Division"
+
+read ch
+# Switch Case to perform
+# calculator operations
+
+case $ch in
+
+  1)res=`echo $a + $b | bc` ;;
+  2)res=`echo $a - $b | bc`  ;;
+  3)res=`echo $a \* $b | bc` ;;
+  4)res=`echo "scale=2; $a / $b" | bc` ;;
+  esac
+echo "Result : $res"
+

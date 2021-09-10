@@ -1,0 +1,151 @@
+#Assignment 7  Q1
+echo $HOME
+ls -l | grep ^d | wc -l #count the no. of directories
+
+ls -la | grep ^- | wc -l# count all files including hidden files in directory
+
+ls -la | grep ^- | wc -l # count only files in directory
+
+ls -la | grep ^- | wc -l echo no. of dirs\; -o -type f -exec echo no. of files
+
+find -maxdepth 1 -type f -printf  '$ find -maxdepth 1 -type f  -printf  '%f    %t   %p  \n'# display filename datetime and permission
+
+Q1. Write a shell script to display a directory listing as follows. Your home directory is <home directory name>
+File name date time permission
+------------- ------ ----- ---------------
+Filename1 date time permission
+Filename2 date time permission
+Filename3 date time permission
+………..
+………..
+Total no. of files : <total number>
+Total no of normal file : <number>
+Total no of directory : <number>
+
+echo "Your home directory is $HOME "
+echo " Filename date time permission"
+find -maxdepth 1 -type f -printf  "%f    %t   %p    \n" 
+f= ls -a | grep ^- | wc -l
+echo "Total no. of files : " $f
+nf= ls -la | grep ^- | wc -l
+echo "Total no of normal file :" $nf
+d= ls -la | grep ^- | wc -l 
+echo "Total no of directory : " $d
+
+Q2. Write a shell to accept the details for movie LIBRARY.
+movie No.
+Name of the movie
+director
+actor
+actress
+Year of release
+category
+Validations
+1) Movie no. should not exist in the file.
+2) 2,3 and 4th entry cannot be blank
+3) year of release cannot be >= 2008
+4) Year or release should be less than 1850
+5) Category can be comedy, action, thriller, Suspense
+The user should be able to repeatedly enter the data until
+it is valid. He should also be able to enter multiple records
+
+Q3. Write a shell procedure to delete the specified record from the library file. It should accept a movie number, check whether it is exists. If so, display the current details, ask for confirmation and then delete it from the file.
+
+Q4. Write a shell script to menu driven program that is update and delete student records.
+
+clear
+i="y"
+echo "Enter name of database "
+read db
+while [ $i = "y" ]
+do
+clear
+echo "1.View the Data Base "
+echo "2.View Specific Records "
+echo "3.Add Records "
+echo "4.Delete Records "
+echo "5.Exit "
+echo "Enter your choice "
+read ch
+    case $ch in
+        1)cat $db;;
+        2)echo "Enter id "
+          read id
+            grep -i "$id" $db;;
+        3)echo "Enter new std id "
+          read tid
+          echo "Enter new name:"
+          read tnm
+          echo "Enter designation "
+          read des
+          echo "Enter college name"
+          read college
+          echo "$tid    $tnm    $des    $college">>$db;;
+        4)echo "Enter Id"
+          read id
+        # set -a
+    #    sed '/$id/d' $db>dbs1
+        grep -v "$id" $db >dbs1    
+          echo "Record is deleted"
+         cat dbs1;;           
+        5)exit;;
+        *)echo "Invalid choice ";;
+    esac
+echo "Do u want to continue ?"
+read i
+if [ $i != "y" ]
+then
+    exit
+fi
+done
+
+Q5. Write a shell script to accept 2 matrices and add them & display.
+
+#Bash script to add two matrix
+matrix1=(1 2 3 4 5 6 7 8 9) #Matrix of size 3 by 3
+matrix2=(11 12 13 14 15 16 17 18 18 19) #Matrix of size 3 by 3
+rows=3
+cols=3
+echo "First matrix"
+for((i=0; i<rows; i++))
+do
+  for((j=0; j<cols; j++))
+  do
+    index=$((i*cols+j))
+    echo -n "${matrix1[index]} "
+  done
+  echo
+done
+ 
+echo "Second matrix"
+for((i=0; i<rows; i++))
+do
+  for((j=0; j<cols; j++))
+  do
+    index=$((i*cols+j))
+    echo -n "${matrix2[index]} "
+  done
+  echo
+done
+ 
+k=0
+matrix3=()
+for((i=0; i<rows; i++))
+do
+  for((j=0; j<cols; j++))
+  do
+    index=$((i*cols+j))
+    matrix3[k]=$((${matrix1[index]} + ${matrix2[index]}))
+    k=$((k+1))
+  done
+done
+echo "Addition of two matrix"
+for((i=0; i<rows; i++))
+do
+  for((j=0; j<cols; j++))
+  do
+    index=$((i*cols+j))
+    echo -n "${matrix3[index]} "
+  done
+  echo
+done

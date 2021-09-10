@@ -1,0 +1,122 @@
+#assignment 3
+Q1 Write a shell script to rename file having extension sh to exe.
+
+echo "enter the filename with .sh which you want to rename"
+read f1
+echo "enter the name with .exe  which you want to rename"
+read f2
+mv $f1 $f2
+echo " Your file is successfully renamed"
+
+or
+ for file in Desktop/*.sh
+do mv "$file" "${file%.*}.exe"
+done
+
+Q2Write a Unix shell script to accept 10 number and tell how many are +tive, -tive and zero. Also display the in ascending order.
+
+i=1
+zero=0
+pos=0
+neg=0
+while((i<11))
+do
+   echo "enter numbers:"
+   read num
+  
+   if [ $num -lt 0 ]
+   then  
+        neg=$((neg+1))
+    fi
+  if [ $num -gt 0 ]
+  then
+      pos=$((pos+1))
+   fi
+  if [ $num -eq 0 ]
+  then
+      zero=$((zero+1))
+   fi
+i=$((i+1))
+done
+echo "Total postive numbers are: $pos" 
+echo "Total negative numbers are: $neg" 
+echo "Total zero numbers are: $zero" 
+
+Q3 Write a shell script to examine all the number from 1 to 999 and display all those number whose sum of cube of the digit is equal to the number. 
+e.g. 371 = 3*3*3+7*7*7+1*1*1
+
+
+i=1
+while((i<1000))
+do
+c=$i
+d=$i
+b=0
+a=0
+#checking each number
+while((c>0))
+do
+#separating each digit
+a=$((c%10))
+#finding cube of each digit and adding them
+b=$((b + a*a*a))
+c=$((c/10))
+done
+if((b==d)); then
+echo "$i"
+fi
+i=$((i+1))
+done
+
+
+
+Q4Write a shell script to display Date in different format along with Time.
+
+d="$(date +'%y-%m-%d %T')"
+printf "Date and Time is %s\n" "$d"
+dateonly="$(date +'%b %d, %Y %T')"
+printf "Date is %s\n" "$dateonly"
+date="$(date +'%m/%d/%y %T')"
+printf "Date is is %s\n" "$date"
+ 
+or
+f1=$(date +"%d-%m-%Y  %T")
+echo "$f1"
+f2=$(date +"%d/%m/%Y  %r")
+echo "$f2"
+f3=$(date +"%d/%b/%Y  %H-%M")
+echo "$f3"
+
+Q5Write a shell script to accept fine number and display max and min value. If any two or three or four values are same then display proper message.
+
+echo "how many numbers you want to check"
+read n
+
+i=1
+echo "enter first number:"
+read num1
+max=$num1
+min=$num1
+same=0
+echo "Enter n=$((n-1)) numbers:"
+
+while [ $i -lt $n ]
+do
+   read num
+   if [ $num -gt $max ]
+   then  
+        max=$num
+    fi
+ if [ $num -lt $min ]
+   then  
+        min=$num
+    fi
+  if [ $num -eq $num ]
+  then
+      same=$((same+1))
+   fi
+i=$((i+1))
+done
+echo max value=$max
+echo min value=$min
+echo same values are=$same

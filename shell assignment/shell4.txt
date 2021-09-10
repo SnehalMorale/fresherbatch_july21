@@ -1,0 +1,90 @@
+Q1Write a shell script to find out how many file and directory are their in current directory. Also list the file and directory name separately.
+
+echo "Number of directories are:"
+ls -l | grep ^- | wc -l # count only files in directory
+echo "Number of files are:"
+ls -l | grep ^d | wc -l #count the no. of directories
+echo "List of directories:"
+ls -d
+echo "List of files:"
+ls -f
+
+Q2. Write a shell script to create a menu driven program for adding, deletion or finding a record in a database. Database should have the field like rollno, name, semester and marks of three subjects. Last option of the menu should be to exit the menu.
+
+clear
+i="y"
+echo "Enter name of database "
+read db
+while [ $i = "y" ]
+do
+clear
+echo "1.View the Data Base "
+echo "2.View Specific Records "
+echo "3.Add Records "
+echo "4.Delete Records "
+echo "5.Exit "
+echo "Enter your choice "
+read ch
+    case $ch in
+        1)cat $db;;
+        2)echo "Enter Roll No: "
+          read rn
+            grep -i "$rn" $db;;
+        3)echo "Enter Roll No: "
+          read trn
+          echo "Enter  name:"
+          read tnm
+          echo "Enter semester: "
+          read sem
+          echo "Enter marks of three subjects:"
+          read s1 s2 s3
+          echo "$trn    $tnm    $sem    $s1   $s2   $s3">>$db;;
+        4)echo "Enter Id"
+          read id
+        # set -a
+    #    sed '/$id/d' $db>dbs1
+        grep -v "$rn" $db >dbs1    
+          echo "Record is deleted"
+         cat dbs1;;           
+        5)exit;;
+        *)echo "Invalid choice ";;
+    esac
+echo "Do u want to continue ?"
+read i
+if [ $i != "y" ]
+then
+    exit
+fi
+done
+
+Q3. Write a shell script to accept the employee name from the user and display appropriate message. Assume employee is working on a single project. Employee project details are stored in the file proj.dat and employee data are stored in
+emp.dat
+proj.dat emp.dat
+emp_no int emp_no int
+proj_no int proj_no int
+dayswork int name char
+duration int
+if message
+duration = dayswork <name>, Today is last day of project.
+duration < dayswork <name>, you are delaying the project.
+daysremaing <= 30 <name>, hurry up only <days> are remaining.
+daysremaing > 30 <name>, you have still <days> to finish the project.
+Q4. Write a shell scripts to count number of vowels in file ignoring the case.
+
+
+Q5Write a shell program which will work like wc.
+
+echo "enter the file name"
+read file
+v=0
+ 
+if [ ! -f $file ]
+then
+	echo "$file not a file"
+	exit 2
+fi
+ 
+c=`cat $file |wc -c`
+w=`cat $file |wc -w`
+l=`grep -c ". " $file`
+echo " $l $w $c $file "

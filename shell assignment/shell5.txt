@@ -1,0 +1,177 @@
+Q1. Write a unix shell to add records to a file called item.dat The fields being itemcode, qty, sold and rate
+item_code to be generated
+qty_sold should be greater than 0
+rate between 100 to 10000
+
+echo "Enter item code "
+read ic
+echo "Enter qty_sold:"
+read qs
+echo "Enter rate "
+read rt
+
+
+while(($qs>0))
+do
+if [ $rt -gt 100 ] && [ $rt -lt 10000 ]
+then
+echo "Enter item code: " $ic >>item.dat
+echo "Enter qty_sold:" $qs >>item.dat
+echo "Enter rate " $rt >>item.dat
+echo "Data is successfully stored."
+exit
+else 
+exit
+fi
+echo "Data is not stored. Read question carefully."
+done
+
+
+Q2. Write a Unix shell script which accepts a choice from the user and execute the corresponding option using case structure for above file structure. The format of the menu is
++ -> Addtion of record
+! -> Modification of records
+- -> Deletion of records
+s -> Quit
+
+
+record(){
+echo "Enter item code "
+read ic
+echo "Enter qty_sold:"
+read qs
+echo "Enter rate "
+read rt
+
+
+while(($qs>0))
+do
+if [ $rt -gt 100 ] && [ $rt -lt 10000 ]
+then
+echo "Enter item code: " $ic >>item.dat
+echo "Enter qty_sold:" $qs >>item.dat
+echo "Enter rate " $rt >>item.dat
+echo "Data is successfully stored."
+exit
+else 
+exit
+fi
+echo "Data is not stored. Read question carefully."
+done
+}
+
+
+clear
+i="y"
+echo "enter the name of file structure:(item.dat)"
+read db
+while [ $i = "y" ]
+do
+clear
+echo "!.View Specific Records "
+echo "+.Add Records "
+echo "-.Delete Records "
+echo "s.Exit "
+echo "Enter your choice "
+read ch
+    case $ch in
+        !)echo "Enter item code: "
+          read ic
+            grep -i "$ic" $db;;
+        +) record ;;
+         
+        -)echo "Enter item code"
+          read ic
+        # set -a
+    #    sed '/$id/d' $db>dbs1
+        grep -v "$ic" $db >dbs1    
+          echo "Record is deleted"
+         cat dbs1;;           
+        s)exit;;
+        *)echo "Invalid choice ";;
+    esac
+echo "Do u want to continue ?"
+read i
+if [ $i != "y" ]
+then
+    exit
+fi
+done
+
+
+
+
+
+
+Q3Write a shell scripts to generate random number. Allow user to guess 6 times to get the no. Print appropriate messages after each guess.
+e.g. Random generated is 10
+Users enters 4 message : To small
+User enters 14 then Messge to big
+
+#! /bin/bash
+
+system_no=$RANDOM
+
+for ((i=1;i<=6;i++))
+do 
+read -p "This is your chance number  $i ,Guess my number: " user_no
+if [ $user_no -eq $system_no ]
+then
+echo "Your guess is correct"
+else
+echo "Your guess is wrong"
+if [ $user_no -gt $system_no ]
+then
+        echo "Entered number is too biggg"
+else
+        echo "Entered number is too small"
+fi
+fi
+done
+ 
+Q4 Write a Unix Shell script that takes a login as a command line argument and reports to you when that person logs in.
+
+uid=$1
+if [ $# -eq 0 ]
+then
+        echo "Enter logname"
+        read uid
+fi
+
+ch=`who | grep $uid -c`
+if [ $ch -eq 1 ]
+then
+        echo $uid "loging"
+else
+        echo "Logname user current not loging"
+fi
+
+Q5 Write shell script to accept marks of of Unix, VB.Net,PHP and calculate the average of marks and display the message as follow :
+if Average then display
+- is 70 or above "Distinction"
+- is 60 <= 70 "First Class"
+- is 50 <= 60 "Second Class"
+- is 40 <= 50 "Third Class"
+- otherwise "Fail"
+
+echo "Enter the marks of  Unix, VB.net, PHP subjects : "
+read m1 m2 m3 
+let total=$m1+$m2+$m3
+let avg=(total/3)
+echo Student total marks:$total
+echo Student average :$avg
+if [ $avg -ge 70 ]
+then
+echo "Distinction"
+elif [ $avg -ge 60 -a $avg -lt 70 ]
+then
+echo "First Class"
+    
+elif [ $avg -ge 50 -a $avg -lt 60 ]
+then
+echo "Second Class"
+elif [ $avg -ge 40 -a $avg -lt 50 ]
+then
+echo "Third Class"
+else
+echo "Fail"
+fi

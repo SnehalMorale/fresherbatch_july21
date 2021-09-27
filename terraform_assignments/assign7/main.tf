@@ -1,7 +1,7 @@
 provider "aws" {
   region = "${var.aws_region}"
-  access_key = "AKIAZEAX6RNQNMRMVZUS"
-  secret_key = "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"
+  access_key = "my-access-key"
+  secret_key = "my-secret-key"
 }
 
 resource "random_id" "tf_bucket_id" {
